@@ -1,0 +1,28 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "apis": [
+    {
+      "path": "/apidocs/curriculums.{format}",
+      "description": "Curriculums Management"
+    },
+    {
+      "path": "/apidocs/camps.{format}",
+      "description": "Camps Management"
+    },
+    {
+      "path": "/apidocs/instructors.{format}",
+      "description": "Instructors Management"
+    },
+    {
+      "path": "/apidocs/locations.{format}",
+      "description": "Locations Management"
+    }
+  ],
+  "authorizations": null,
+  "info": {
+    "title": "ChessCamps API",
+    "description": "Uses swagger ui and docs to document the ChessCamps API"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "instructors",
+  "apis": [
+    {
+      "path": "/instructors.json",
+      "operations": [
+        {
+          "summary": "Fetches all Instructors",
+          "notes": "This lists all the Instructors",
+          "nickname": "Instructors#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/instructors/{id}.json",
+      "operations": [
+        {
+          "summary": "Shows one Instructor",
+          "notes": "This lists details of one instructor",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Instructor ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Instructors#show",
+          "method": "get"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

@@ -1,0 +1,47 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "locations",
+  "apis": [
+    {
+      "path": "/locations.json",
+      "operations": [
+        {
+          "summary": "Fetches all Locations",
+          "notes": "This lists all the Locations",
+          "nickname": "Locations#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/locations/{id}.json",
+      "operations": [
+        {
+          "summary": "Shows one Location",
+          "notes": "This lists details of one location",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Location ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Locations#show",
+          "method": "get"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

@@ -1,0 +1,47 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "curriculums",
+  "apis": [
+    {
+      "path": "/curriculums.json",
+      "operations": [
+        {
+          "summary": "Fetches all Curriculums",
+          "notes": "This lists all the Curriculums",
+          "nickname": "Curriculums#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/curriculums/{id}.json",
+      "operations": [
+        {
+          "summary": "Shows one Curriculum",
+          "notes": "This lists details of one curriculum",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Curriculum ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Curriculums#show",
+          "method": "get"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

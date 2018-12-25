@@ -1,0 +1,47 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "camps",
+  "apis": [
+    {
+      "path": "/camps.json",
+      "operations": [
+        {
+          "summary": "Fetches all Camps",
+          "notes": "This lists all the Camps",
+          "nickname": "Camps#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/camps/{id}.json",
+      "operations": [
+        {
+          "summary": "Shows one Camp",
+          "notes": "This lists details of one camp",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Camp ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            }
+          ],
+          "nickname": "Camps#show",
+          "method": "get"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}
